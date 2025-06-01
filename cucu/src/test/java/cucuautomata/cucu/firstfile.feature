@@ -1,25 +1,26 @@
 
 Feature: Application login Page
 
-  
+Background:
+Given User goes to site
+When  User enters the URL
+
+@regressiontest @smoketest
 Scenario: Admin page default login
-  
 Given User is on netbanking landing page 
 When  User login into application with User "babu" and password "bhyya"
 Then Homepage is displayed
 And Cards are displayed
 
-
+@regressiontest
 Scenario: User page default login
 Given User is on netbanking landing page 
 When  User login into application with User "puguu" and password "bhyya"
 Then Homepage is displayed
 And Cards are displayed
    
-   
-   
+@smoketest
 Scenario Outline: User page default login 
-
 Scenario: User page default login
 Given User is on netbanking landing page 
 When  User login into application with User "<Username>" and password "<Password>"
@@ -30,6 +31,21 @@ Examples:
  |Username|Password|
  |Mullugat|popu|
  |Creditu|poass| 
+
+
+   
+
+@smoketest 
+Scenario: User page default login
+Given User is on netbanking landing page 
+When  User sign up on application
+|Sourabh|
+|Shrivastava|
+|sourabhshrivastava569@gmail.com|
+|02-01-1990|
+|8698425477|
+Then Homepage is displayed
+And Cards are displayed
 
 
 
