@@ -1,0 +1,38 @@
+package stepdefinition;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class mainSteps {
+
+	
+	
+
+
+@Given("User is on netbanking landing page")
+public void user_is_on_netbanking_landing_page() {
+    // Write code here that turns the phrase above into concrete actions
+    System.out.println("Landing Page");
+	
+}
+@When("^User login into application with User {.+} and password {.+}$")
+public void user_login_into_application_with_User_and_password(String Username, String password) {
+    // Write code here that turns the phrase above into concrete actions
+	System.out.println(Username+ " and password is "+ password);
+	
+   
+}
+@Then("Homepage is displayed")
+public void homepage_is_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+	System.out.print("Home Page");
+	
+}
+@Then("Cards are displayed")
+public void cards_are_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+	System.out.print("Cards are displayed");
+	
+}
+}

@@ -1,0 +1,12 @@
+
+Feature: Application login Page
+
+  
+Scenario: Admin page default login
+  
+Given User is on netbanking landing page 
+When  User login into application with User "babu" and password "bhyya"
+Then Homepage is displayed
+And Cards are displayed
+   
+ 
